@@ -95,9 +95,10 @@
 }
 #ricerca{
   border-bottom: 2px gray solid;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding-top: 22px;
+  padding-bottom: 22px;
   background-color: white;
+  position: relative;
 }
 #barra{
   width: 100%;
@@ -107,11 +108,17 @@
 }
 #ricerca > #barra > i{
   position:absolute;
+  top: 40%;
+  left: 90%;
 }
 #search{
   width: 90%;
+  margin: 0 auto;
   background: white no-repeat 10px 8px;
+  height: 35px;
+
 }
+
 .chat{
   display: flex;
   justify-content: space-between;
@@ -119,7 +126,7 @@
   background-color: white;
   border-bottom: 2px gray solid;
   width: 100%;
-  height: 15%;
+  height: 85px;
 }
 .chat:hover{
   background-color: yellow;
@@ -212,6 +219,8 @@ footer{
 }
 #barra2 > input{
   width: 100%;
+  height: 51px;
+  border: 1px black solid;
 }
 #mic{
   flex-basis: 10%;
@@ -222,6 +231,6 @@ footer{
 }
 #mic > .fa-telegram-plane{
   font-size: 25px;
-  padding-right: 20px;
+  padding-right: 25px;
   display: none;
 }
