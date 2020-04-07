@@ -29,14 +29,14 @@
   height: 90vh;
   width: 70vw;
   margin: 0 auto;
-  border: 5px black solid;
+  border: 2px black solid;
   z-index: 99;
 }
 #column-left{
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  border: 5px black solid;
+  border: 2px black solid;
   height: 100%;
   width: 40%;
 }
@@ -79,10 +79,10 @@
 }
 #notifiche > #cerchio > i{
   color: #60c7f0;
-  font-size: 189%;
+  font-size: 37px;
   position: absolute;
-  top: 24%;
-  left: 8%;
+  top: 11%;
+  left: 13%;
 }
 #ricevi_mess {
   padding-left: 70px;
@@ -136,7 +136,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border: 5px black solid;
+  border: 2px black solid;
   height: 100%;
   width: 80%;
 }
@@ -151,17 +151,21 @@ header{
 }
 .name{
   padding-top: 6px;
-  padding-right: 75%;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+}
+.ultimo_accesso{
+  flex-basis: 100%;
 }
 .icone1{
   display: flex;
-  flex-basis: 100%;
   padding-top: 3%;
 }
 #column-right > header > .icone1 > i{
   font-size: 20px;
   display: inline-block;
-  padding-right: 13%;
+  padding-right: 22%;
 }
 #main{
   width: 100%;
@@ -171,10 +175,11 @@ header{
 }
 .destra{
   float: right;
-  background-color: green;
+  background-color: #96d16f;
   text-align: center;
   height: 60px;
   width: 120px;
+  border-radius: 10%;
 }
 .sinistra{
   float: left;
@@ -182,6 +187,7 @@ header{
   text-align: center;
   height: 60px;
   width: 120px;
+  border-radius: 10%;
 }
 footer{
   background-color: white;
