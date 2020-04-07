@@ -17,7 +17,7 @@
 #colore2{
   height: 100vh;
   width: 100vw;
-  background-color: #e7e8e1;
+  background-color: #DDDBD1;
 }
 #spazio{
   height: 5vh;
@@ -44,7 +44,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #e7e8e1;
+  background-color: #D2DBDC;
   border-bottom: 2px gray solid;
   width: 100%;
   height: 92px;
@@ -97,6 +97,7 @@
   border-bottom: 2px gray solid;
   padding-top: 12px;
   padding-bottom: 6px;
+  background-color: #D2DBDC 100%;
 }
 #barra{
   width: 100%;
@@ -115,7 +116,7 @@
   display: flex;
   justify-content: space-between;
   align-items: start;
-  background-color: #e7e8e1;
+  background-color: #D2DBDC 100%;
   border-bottom: 2px gray solid;
   width: 100%;
   height: 15%;
@@ -144,7 +145,7 @@ header{
   display: flex;
   justify-content: space-between;
   align-items: start;
-  background-color: #e7e8e1;
+  background-color: #D2DBDC;
   border-bottom: 2px gray solid;
   width: 100%;
   height: 85px;
@@ -190,13 +191,14 @@ header{
   border-radius: 10%;
 }
 footer{
-  background-color: white;
+  background-color: #D2DBDC 100%;
   border-bottom: 2px gray solid;
   width: 100%;
   height: 10%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-top: 2px grey solid;
 }
 #icona_prima{
   flex-basis: 10%;
