@@ -4,12 +4,6 @@
   box-sizing: border-box;
   font-family: 'Comic Neue', cursive;
 }
-.row{
-  content: '';
-  display: table;
-  overflow: hidden;
-  clear: both;
-}
 #colore1{
   width: 100vw;
   height: 15vh;
@@ -30,14 +24,13 @@
   height: 90vh;
   width: 70vw;
   margin: 0 auto;
-  border: 2px black solid;
   z-index: 99;
 }
 #column-left{
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  border: 2px black solid;
+  border: 1px grey solid;
   height: 100%;
   width: 40%;
 }
@@ -74,7 +67,7 @@
   width: 14%;
   height: 69%;
   position: absolute;
-  top: 10%;
+  top: 14%;
   left: 1%;
 }
 #notifiche > #cerchio > i{
@@ -85,8 +78,8 @@
   left: 28%;
 }
 #ricevi_mess {
-  padding-left: 70px;
-  padding-top: 10px;
+  padding-left: 89px;
+  padding-top: 20px;
   height: 100%;
   line-height: 22px;
 }
@@ -141,7 +134,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border: 2px black solid;
+  border: 1px grey solid;
   height: 100%;
   width: 80%;
 }
@@ -152,7 +145,7 @@ header{
   background-color: white;
   border-bottom: 2px gray solid;
   width: 100%;
-  height: 85px;
+  height: 86px;
 }
 .name{
   padding-top: 6px;
@@ -165,11 +158,12 @@ header{
 }
 .icone1{
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding-top: 3%;
 }
 .column-right > header > .icone1 > i{
   font-size: 20px;
-  display: inline-block;
   padding-right: 22%;
 }
 .main{
@@ -179,7 +173,9 @@ header{
   overflow-y: scroll;
 }
 .destra{
+  position: relative;
   display: flex;
+  clear: both;
   justify-content: center;
   align-items: center;
   float: right;
@@ -188,7 +184,9 @@ header{
   height: 50px;
 }
 .sinistra{
+  position: relative;
   display: flex;
+  clear: both;
   justify-content: center;
   align-items: center;
   float: left;
@@ -198,6 +196,8 @@ header{
 }
 .padding{
   padding: 12px;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 footer{
   background-color: white;
@@ -236,4 +236,79 @@ footer{
 .mic > .fa-telegram-plane{
   font-size: 25px;
   display: none;
+}
+.invisible{
+  display: none;
+}
+.column-right.active{
+  display : flex;
+}
+.chat.active{
+  background-color: grey;
+}
+.right-angle{
+  position: absolute;
+  top: 31%;
+  left: 6%;
+}
+.left-angle{
+  position: absolute;
+  top: 31%;
+  left: 83%;
+}
+.fa-angle-down{
+  font-size: 20px;
+}
+.hiddenmenu_right{
+  display: none;
+  position: absolute;
+  top: 75%;
+  left: -40%;
+  background-color: white;
+  width: 100%;
+  height: 45px;
+  text-align: center;
+}
+.hiddenmenu_left{
+  display: none;
+  position: absolute;
+  top: 80%;
+  left: 41%;
+  background-color: white;
+  width: 100%;
+  height: 45px;
+  text-align: center;
+}
+.message{
+  margin-top: 12px;
+  margin-left: 12px;
+  margin-right: 12px;
+  margin-bottom: 24px;
+}
+@media screen and (max-width: 1200px){
+  #cerchio{
+    border-radius: 100%;
+    background-color: white;
+    width: 23%;
+    height: 50%;
+    position: absolute;
+    top: 21%;
+    left: 3%;
+  }
+  #notifiche > #cerchio > i{
+    color: #60c7f0;
+    font-size: 21px;
+    position: absolute;
+    top: 32%;
+    left: 25%;
+  }
+  #ricevi_mess {
+    padding-left: 89px;
+    padding-top: 10px;
+    height: 100%;
+    line-height: 22px;
+  }
+  #scroll > .chat > .nome > h2{
+    font-size: 16px;
+  }
 }
