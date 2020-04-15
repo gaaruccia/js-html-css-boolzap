@@ -40,6 +40,5 @@ $(document).ready(function () {
   })
   $(".main").on("click", ".sottomenu", function(){
     $(this).parents(".message").remove();
-
   })
 })

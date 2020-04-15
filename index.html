@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/b11d814f49.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
   </head>
   <body>
     <main id="colore2">
@@ -439,6 +440,15 @@
           </div>
         </div>
       </div>
+      <!-- TEMAPLATE msg -->
+		<script id="msg-template" type="text/x-handlebars-template">
+			<div class="message destra">
+				<span class="padding">{{msgPH}}</span>
+				  <i class="fa fa-angle-down right-angle"></i>
+			   <div class= "sottomenu hiddenmenu_right">Cancella messaggio</div>
+				</span>
+			</div>
+		</script>
     </main>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="main.js"></script>
