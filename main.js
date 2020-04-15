@@ -41,4 +41,6 @@ $(document).ready(function () {
   $(".main").on("click", ".sottomenu", function(){
     $(this).parents(".message").remove();
   })
+  var source = $('#msg-template').html();
+  var template = Handlebars.compile(source);
 })
