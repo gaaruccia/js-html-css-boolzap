@@ -27,9 +27,9 @@ $(document).ready(function () {
     var input = $(".active  .festivalbar");
     var inputVal = input.val();
     $(".active .main").append('<div class="message destra">' + '<span class="padding">' + inputVal + '<i class="fas fa-angle-down right-angle"></i><div class="sottomenu hiddenmenu_right">Cancella messaggio</div>' + '</span>' + '</div>');
-    var msgRight = $('#msg-template-right').html();
+    var msgRight = $('#msg-template').html();
     var template = Handlebars.compile(msgRight);
-    var contenutoMsgright = {msgPHright: inputVal};
+    var contenutoMsgright = {"classPh": "destra", "msgPH": inputVal, "anglePh": "right-angle", "hiddenPh": "hiddenmenu_right"};
     var html = template(contenutoMsgright);
     $(".active .main").append(html)
     input.val("");
@@ -38,9 +38,9 @@ $(document).ready(function () {
     setTimeout(timer, 1000)
     function timer(){
     $(".active .main").append('<div class="message sinistra">'+ '<span class="padding">' + "ok" + '<i class="fas fa-angle-down left-angle"></i><div class="sottomenu hiddenmenu_left">Cancella messaggio</div>' +'</span>' + '</div>');
-    var msgLeft= $('#msg-template-left').html();
+    var msgLeft= $('#msg-template').html();
     var template = Handlebars.compile(msgLeft);
-    var contenutoMsgleft = {msgPHleft: "ok"};
+    var contenutoMsgleft = {"classPh": "sinistra", "msgPH": "ok", "anglePh": "left-angle", "hiddenPh": "hiddenmenu_left"};
     var html = template(contenutoMsgleft);
     $(".active .main").append(html)
     }
@@ -51,9 +51,4 @@ $(document).ready(function () {
   $(".main").on("click", ".sottomenu", function(){
     $(this).parents(".message").remove();
   })
-
-  var source = $('#msg-template-left').html();
-  var template = Handlebars.compile(source);
-  var context = {msgPHleft: "ok"};
-  var html = template(context);
 })

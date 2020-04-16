@@ -441,19 +441,11 @@
         </div>
       </div>
       <!-- TEMAPLATE msg -->
-		<script id="msg-template-right" type="text/x-handlebars-template">
-			<div class="message destra">
-				<span class="padding">{{msgPHright}}</span>
-				  <i class="fa fa-angle-down right-angle"></i>
-			   <div class= "sottomenu hiddenmenu_right">Cancella messaggio</div>
-				</span>
-			</div>
-		</script>
-    <script id="msg-template-left" type="text/x-handlebars-template">
-			<div class="message sinistra">
-				<span class="padding">{{msgPHleft}}</span>
-				  <i class="fa fa-angle-down left-angle"></i>
-			   <div class= "sottomenu hiddenmenu_left">Cancella messaggio</div>
+		<script id="msg-template" type="text/x-handlebars-template">
+			<div class="message {{classPh}}">
+				<span class="padding">{{msgPH}}</span>
+				  <i class="fa fa-angle-down {{anglePh}}"></i>
+			   <div class= "sottomenu {{hiddenPh}}">Cancella messaggio</div>
 				</span>
 			</div>
 		</script>
