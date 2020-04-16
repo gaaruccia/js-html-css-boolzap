@@ -27,12 +27,22 @@ $(document).ready(function () {
     var input = $(".active  .festivalbar");
     var inputVal = input.val();
     $(".active .main").append('<div class="message destra">' + '<span class="padding">' + inputVal + '<i class="fas fa-angle-down right-angle"></i><div class="sottomenu hiddenmenu_right">Cancella messaggio</div>' + '</span>' + '</div>');
+    var msgRight = $('#msg-template-right').html();
+    var template = Handlebars.compile(msgRight);
+    var contenutoMsgright = {msgPHright: inputVal};
+    var html = template(contenutoMsgright);
+    $(".active .main").append(html)
     input.val("");
     $(".fa-telegram-plane").hide();
     $(".fa-microphone").show();
     setTimeout(timer, 1000)
     function timer(){
     $(".active .main").append('<div class="message sinistra">'+ '<span class="padding">' + "ok" + '<i class="fas fa-angle-down left-angle"></i><div class="sottomenu hiddenmenu_left">Cancella messaggio</div>' +'</span>' + '</div>');
+    var msgLeft= $('#msg-template-left').html();
+    var template = Handlebars.compile(msgLeft);
+    var contenutoMsgleft = {msgPHleft: "ok"};
+    var html = template(contenutoMsgleft);
+    $(".active .main").append(html)
     }
   })
   $(".main").on("click", ".fa-angle-down", function(){
@@ -41,6 +51,9 @@ $(document).ready(function () {
   $(".main").on("click", ".sottomenu", function(){
     $(this).parents(".message").remove();
   })
-  var source = $('#msg-template').html();
+
+  var source = $('#msg-template-left').html();
   var template = Handlebars.compile(source);
+  var context = {msgPHleft: "ok"};
+  var html = template(context);
 })
